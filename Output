@@ -1,0 +1,9 @@
+$ sudo insmod addsyscall.ko
+[ 123.456789] sys_call_table found at ffffffff81700400
+[ 123.456790] Inserted new syscall at 333
+
+$ ./test_addsyscall
+Returned 22 bytes: Hello from kernel syscall!
+
+$ sudo rmmod addsyscall
+[ 125.678901] Restored original syscall at 333
